@@ -14,18 +14,18 @@
 
 ---
 
-## 🖥️ System Overview
+## 🖥️ Overview
 VidGenius is an enterprise-grade video optimization platform leveraging Google's Gemini multimodal AI for:
 - Automated content analysis
 - Narrative structure optimization
 - Technical editing recommendations
 - Redundancy detection & timeline segmentation
 
-![VidGenius Workflow](https://github.com/Prasaderp/Real-Time-Emotion-Analytics-System-using-OpenCV/blob/master/Preview.png)
+VidGenius Preview - https://github.com/Prasaderp/VidGenius-Narrative-Optimization-Gemini2.0/assets/123456789/preview.mp4
 
 ---
 
-## 🛠️ Technical Architecture
+## 🛠️ Architecture
 
 ### Core Components
 ```mermaid
@@ -120,13 +120,8 @@ vidgenius/
 - **File Handling:** Temporary files auto-purged post-analysis
 - **Data Privacy:** No persistent storage of user uploads
 
-<div align="center">
-💡 Have ideas? [Open an Issue](https://github.com/Prasaderp/VidGenius-Narrative-Optimization-Gemini2.0/issues)  
-📩 Contact: itsprasadsomvanshi@gmail.com
-</div>
-
 ---
 
 <div align="center">
-    📄 [License](LICENSE) | 🐛 [Report Issues](https://github.com/yourusername/vidgenius/issues) | 📧 Contact: itsprasadsomvanshi@gmail.com
+    📄 [Report Issues](https://github.com/Prasaderp/VidGenius-Narrative-Optimization-Gemini2.0/issues) | 📧 Contact: itsprasadsomvanshi@gmail.com
 </div>
