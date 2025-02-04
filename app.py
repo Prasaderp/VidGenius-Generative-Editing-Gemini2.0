@@ -11,21 +11,21 @@ import tempfile
 from dotenv import load_dotenv
 import os
 
-# Load environment variables
+# environment variables
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if GOOGLE_API_KEY:
     genai.configure(api_key=GOOGLE_API_KEY)
 
-# Page configuration with modern theme
+# Page configuration 
 st.set_page_config(
     page_title="VidGenius - GenAI Video Optimization",
-    page_icon="✪", # Stylish alternative to scissors
+    page_icon="✪",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# Cache the agent initialization at the top level
+# Cache agent initialization
 @st.cache_resource
 def initialize_editor_agent():
     return Agent(
@@ -35,10 +35,9 @@ def initialize_editor_agent():
         markdown=True,
     )
 
-# Initialize agent PROPERLY (this was missing in previous version)
 video_editor_agent = initialize_editor_agent()
 
-# Custom CSS for professional appearance
+# Custom CSS
 st.markdown(f"""
     <style>
     /* Main theme colors */
@@ -117,7 +116,7 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# Main content layout
+# Main content
 with st.container():
     col1, col2 = st.columns([3, 7])
     
@@ -130,7 +129,7 @@ with st.container():
         st.header("", divider="rainbow")
         st.subheader("Video Analysis Engine - Powered by Gemini 2.0", anchor=False)
 
-# File upload section
+# File upload 
 with st.container():
     st.markdown("### Step 1: Upload Media")
     uploaded_video = st.file_uploader(
@@ -139,7 +138,7 @@ with st.container():
         label_visibility="collapsed"
     )
 
-# Analysis section
+# Analysis
 if uploaded_video:
     with tempfile.NamedTemporaryFile(delete=False, suffix='.mp4') as temp_file:
         temp_file.write(uploaded_video.read())
@@ -188,7 +187,7 @@ if uploaded_video:
                     )
                     status.update(label="Analysis complete", state="complete")
 
-                # Display results in expandable sections
+                # Display results (expandable sections)
                 if "## Detailed Analysis" in edit_suggestions.content:
                     parts = edit_suggestions.content.split("## Detailed Analysis")
                     summary = parts[0]
@@ -197,7 +196,7 @@ if uploaded_video:
                     summary = edit_suggestions.content
                     details = "Detailed analysis not found."
 
-                # Display results
+                # results
                 with st.expander("📋 Executive Summary", expanded=True):
                     st.markdown(summary)
 
