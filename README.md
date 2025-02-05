@@ -40,17 +40,17 @@ graph TD
 
 ### ✨ Key Features
 #### Multimodal Video Analysis
-- 🎥 Frame-by-frame content understanding
-- 🌜 Narrative structure evaluation
+-  Frame-by-frame content understanding
+-  Narrative structure evaluation
 
 #### AI-Powered Optimization
-- ⚙️ Technical editing recommendations
-- ⏱️ Timeline segmentation
+-  Technical editing recommendations
+-  Timeline segmentation
 
 #### Enterprise-Grade Features
-- 🔒 Secure file handling
-- 📊 Interactive analysis reports
-- ⚡ Real-time processing
+-  Secure file handling
+-  Interactive analysis reports
+-  Real-time processing
 
 ---
 
